@@ -1,3 +1,31 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add your custom styles here */
+
 * {
   margin: 0;
+  font-family: "Gill Sans", sans-serif;
+}
+/* styles.css or your global CSS file */
+.white-bullets {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* Adjust as needed */
+  color: white; /* This will set the text color */
+}
+
+.white-bullets li {
+  position: relative;
+  padding-left: 1.5rem; /* Space for bullet */
+}
+
+.white-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: white; /* Bullet color */
+  font-size: 1.5rem; /* Adjust size if needed */
+  line-height: 1; /* Adjust as needed */
 }

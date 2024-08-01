@@ -1,20 +1,19 @@
-import ICText from "@/components/ICText/page";
-import Image from "next/image";
+import ContactForm from "@/components/ContactForm/page";
+import Header from "@/components/Header/page";
+import Hero from "@/components/Hero/page";
+import Services from "@/components/Services/page";
+import WhatIsUppsikt from "@/components/WhatIsUppsikt/page";
+import WhoIsUppsiktFor from "@/components/WhoIsUppsiktFor/page";
 
 export default function Home() {
   return (
     <main className="">
-      <div>
-        <ICText size="large" color="main">
-          This is large and main color text
-        </ICText>
-        <ICText size="medium" color="secondary">
-          This is medium and secondary color text
-        </ICText>
-        <ICText size="small" color="default">
-          This is small and default color text
-        </ICText>
-      </div>
+      <Header></Header>
+      <Hero></Hero>
+      <WhatIsUppsikt></WhatIsUppsikt>
+      <WhoIsUppsiktFor></WhoIsUppsiktFor>
+      <Services></Services>
+      <ContactForm></ContactForm>
     </main>
   );
 }
