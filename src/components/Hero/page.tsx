@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <Image src="/hero.png" layout="fill" objectFit="cover" alt="Hero image" />
       <div className="absolute inset-0 flex items-center justify-center">
         <ICText size="xl" fontWeight="bold" color="white">
-          Fastighetsunderhåll Gjort Enkelt
+          Fastighetsunderhåll Och Hustillsyn
         </ICText>
       </div>
     </div>
