@@ -1,31 +1,42 @@
-/* index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
 
-/* Optional: Add your custom styles here */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 * {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: "Gill Sans", sans-serif;
-}
-/* styles.css or your global CSS file */
-.white-bullets {
-  list-style-type: disc;
-  padding-left: 1.5rem; /* Adjust as needed */
-  color: white; /* This will set the text color */
 }
 
-.white-bullets li {
-  position: relative;
-  padding-left: 1.5rem; /* Space for bullet */
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.white-bullets li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: white; /* Bullet color */
-  font-size: 1.5rem; /* Adjust size if needed */
-  line-height: 1; /* Adjust as needed */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
