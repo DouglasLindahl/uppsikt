@@ -1,10 +1,10 @@
 "use client";
 import styled from "styled-components";
 import { useState } from "react";
-import { colors } from "../../theme";
+import { colors } from "../../../theme";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
-import { socialLinks } from "./utils";
+import { socialLinks } from "../utils";
 
 const StyledHomePage = styled.div`
   font-family: "Open Sans", sans-serif;
@@ -95,7 +95,6 @@ const StyledSocialIcons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 36px;
-
   &:hover {
     cursor: pointer;
   }
@@ -176,66 +175,6 @@ const StyledSectionOneText = styled.p`
     font-size: 18px;
   }
 `;
-
-const StyledSectionTwo = styled.div`
-  position: relative;
-  color: ${colors.background};
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-`;
-
-const StyledSectionTwoInfo = styled.div`
-  padding: 64px 16px;
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  z-index: 1;
-`;
-
-const StyledSectionTwoHeader = styled.div`
-  font-size: 64px;
-  font-weight: bold;
-
-  @media (max-width: 768px) {
-    font-size: 36px;
-  }
-`;
-
-const StyledSectionTwoText = styled.div`
-  font-size: 24px;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-`;
-
-const StyledSectionTwoList = styled.ul`
-  font-size: 24px;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-`;
-
-const StyledSectionTwoListItem = styled.li`
-  margin-left: 24px;
-  padding-top: 12px;
-`;
-
-const StyledSectionTwoImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-`;
-
 const StyledFooter = styled.footer`
   background-color: ${colors.primary};
   padding: 80px 16px 32px;
@@ -279,8 +218,7 @@ const StyledFooterLinkItem = styled.a`
 const StyledFooterCopyrightSection = styled.div`
   text-align: center;
 `;
-
-export default function Home() {
+export default function Anskaffning() {
   const [menuOpen, setMenuOpen] = useState(false);
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -329,7 +267,6 @@ export default function Home() {
               <img src="/Linkedin.svg" alt="LinkedIn" />
             </a>
           </StyledSocialIcons>
-
           <StyledHamburger
             onClick={() => setMenuOpen(!menuOpen)}
           ></StyledHamburger>
@@ -401,64 +338,17 @@ export default function Home() {
       </StyledHero>
 
       <StyledSectionOne>
-        <StyledSectionOneHeader>
-          En kontakt. Allt under kontroll.
-        </StyledSectionOneHeader>
+        <StyledSectionOneHeader>Vad är uppsikt.se?</StyledSectionOneHeader>
         <StyledSectionOneText>
-          Vi är din pålitliga partner på plats. Du får en kontaktperson som
-          känner ditt hus – och ser till att du slipper onödiga samtal, oro
-          eller körningar. Vi dokumenterar, rapporterar och finns där när du
-          inte kan.
+          Uppsikt AB grundades 2022 och erbjuder en rad tjänster som inkluderar
+          hustillsyntjänster, städning och gräsklippning riktade både till
+          privata kunder och företag. Företagets grundkoncept fokuserar på att
+          ordna arbetstillfällen, vilket innebär att de strävar efter att skapa
+          sysselsättning genom sina olika tjänster. Uppsikt AB verkar för att
+          förenkla vardagen för sina kunder genom att erbjuda pålitliga och
+          professionella tjänster inom hem- och trädgårdsvård.
         </StyledSectionOneText>
       </StyledSectionOne>
-
-      <StyledSectionTwo ref={servicesRef}>
-        <StyledSectionTwoImage src="/hero_image_two.png" alt="Hero" />
-        <StyledSectionTwoInfo>
-          <StyledSectionTwoHeader>Helhet är vår styrka</StyledSectionTwoHeader>
-          <StyledSectionTwoText>
-            Vi gör mer än att bara “kolla till huset”. Uppsikt kombinerar
-            regelbunden kontroll med praktisk hjälp och riktig omsorg – både
-            inomhus och utomhus. Vi förebygger problem innan de uppstår, och
-            löser dem när de gör det. Våra tjänster inkluderar:
-          </StyledSectionTwoText>
-          <StyledSectionTwoList>
-            <StyledSectionTwoListItem>
-              <strong>Tillsyn av hus & tomt - </strong> året om eller vid behov
-            </StyledSectionTwoListItem>
-            <StyledSectionTwoListItem>
-              <strong>Städning - </strong> från veckostäd till flyttstäd
-            </StyledSectionTwoListItem>
-            <StyledSectionTwoListItem>
-              <strong>Vintersäkring - </strong> vatten, värme, trädgård
-            </StyledSectionTwoListItem>
-            <StyledSectionTwoListItem>
-              <strong>Trädgårdsservice - </strong> gräsklippning, häckar, löv
-            </StyledSectionTwoListItem>
-            <StyledSectionTwoListItem>
-              <strong>Hantverkshantering - </strong> vi släpper in, ser till &
-              rapporterar
-            </StyledSectionTwoListItem>
-            <StyledSectionTwoListItem>
-              <strong>Trygghetskoll vid uthyrning - </strong> före, under och
-              efter
-            </StyledSectionTwoListItem>
-          </StyledSectionTwoList>
-        </StyledSectionTwoInfo>
-      </StyledSectionTwo>
-
-      <StyledSectionOne>
-        <StyledSectionOneHeader>
-          Personlig service
-          <br /> professionellt utförd
-        </StyledSectionOneHeader>
-        <StyledSectionOneText>
-          Bakom Uppsikt står människor med omtanke och expertis. Vi kombinerar
-          modern tillsyn med klassisk servicekänsla. Det ska kännas både tryggt
-          och enkelt att ha ett hus – även när du inte är där.
-        </StyledSectionOneText>
-      </StyledSectionOne>
-
       <StyledFooter>
         <StyledFooterTopSection>
           <StyledFooterLogo />
