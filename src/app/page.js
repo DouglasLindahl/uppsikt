@@ -140,9 +140,21 @@ const StyledHeroText = styled.div`
   text-align: center;
   font-size: 64px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
 
   @media (max-width: 768px) {
     font-size: 36px;
+  }
+`;
+const StyledHeroSubtext = styled.p`
+  font-size: 24px;
+  width: 50%;
+  @media (max-width: 1148px) {
+    display: none;
   }
 `;
 
@@ -161,6 +173,7 @@ const StyledSectionOne = styled.div`
 const StyledSectionOneHeader = styled.p`
   font-size: 64px;
   font-weight: bold;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -171,6 +184,7 @@ const StyledSectionOneText = styled.p`
   font-size: 24px;
   max-width: 70%;
   width: 100%;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 18px;
@@ -280,10 +294,62 @@ const StyledFooterCopyrightSection = styled.div`
   text-align: center;
 `;
 
+const StyledSectionThree = styled.div`
+  position: relative;
+  color: ${colors.background};
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+`;
+
+const StyledSectionThreeInfo = styled.div`
+  padding: 64px 16px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+`;
+
+const StyledSectionThreeHeader = styled.div`
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+`;
+
+const StyledSectionThreeText = styled.div`
+  font-size: 24px;
+  text-align: center;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+const StyledSectionThreeImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+`;
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
+  const contactRef = useRef(null);
   const router = useRouter();
 
   const handleNavigation = (type) => {
@@ -396,13 +462,19 @@ export default function Home() {
       <StyledHero>
         <StyledHeroImage src="/hero_image.jpeg" alt="Hero" />
         <StyledHeroText>
-          Uppsikt <br /> Din Fastighet. Vårt Ansvar.
+          Din Fastighet - Vårt Ansvar
+          <StyledHeroSubtext>
+            Oavsett om du bor året runt eller bara ibland – vi ser till att din
+            fastighet är i trygga händer. Med Uppsikt får du en helhetslösning
+            för tillsyn, skötsel och service – anpassad efter dina behov, din
+            plats, din livsstil.
+          </StyledHeroSubtext>
         </StyledHeroText>
       </StyledHero>
 
       <StyledSectionOne>
         <StyledSectionOneHeader>
-          En kontakt. Allt under kontroll.
+          En kontakt - Allt under kontroll
         </StyledSectionOneHeader>
         <StyledSectionOneText>
           Vi är din pålitliga partner på plats. Du får en kontaktperson som
@@ -458,6 +530,26 @@ export default function Home() {
           och enkelt att ha ett hus – även när du inte är där.
         </StyledSectionOneText>
       </StyledSectionOne>
+
+      <StyledSectionThree ref={contactRef}>
+        <StyledSectionThreeImage src="/hero_image_two.png" alt="Hero" />
+        <StyledSectionThreeInfo>
+          <StyledSectionThreeHeader>
+            Välkommen att höra av dig!
+          </StyledSectionThreeHeader>
+          <StyledSectionThreeText>
+            Vill du boka ett första samtal eller få en offert?
+          </StyledSectionThreeText>
+          <StyledSectionThreeText>
+            [Kontakta oss här] eller ring oss direkt på{" "}
+            <a href="">031-7880123</a>
+          </StyledSectionThreeText>
+          <StyledSectionThreeText>
+            Vi berättar gärna mer om hur Uppsikt kan förenkla din vardag – året
+            om.
+          </StyledSectionThreeText>
+        </StyledSectionThreeInfo>
+      </StyledSectionThree>
 
       <StyledFooter>
         <StyledFooterTopSection>
