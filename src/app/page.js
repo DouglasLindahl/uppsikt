@@ -360,7 +360,7 @@ export default function Home() {
     } else if (type === "anskaffning") {
       router.push("/anskaffning");
     } else if (type === "kontakt") {
-      window.location.href = "mailto:info@uppsikt.se";
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
     } else if (type === "login") {
       router.push("/login");
     }
@@ -541,9 +541,10 @@ export default function Home() {
             Vill du boka ett första samtal eller få en offert?
           </StyledSectionThreeText>
           <StyledSectionThreeText>
-            [Kontakta oss här] eller ring oss direkt på{" "}
-            <a href="">031-7880123</a>
+            <a href="mailto:info@uppsikt.se">info@uppsikt.se</a> eller ring oss
+            direkt på <a href="tel:0317880123">031-7880123</a>
           </StyledSectionThreeText>
+
           <StyledSectionThreeText>
             Vi berättar gärna mer om hur Uppsikt kan förenkla din vardag – året
             om.
