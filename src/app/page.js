@@ -559,7 +559,9 @@ export default function Home() {
         <StyledFooterBottomSection>
           <StyledFooterInfoItem>Uppsikt Sotenäs AB</StyledFooterInfoItem>
           <StyledFooterInfoItem>Org. No: 559388-9909</StyledFooterInfoItem>
-          <StyledFooterLinkItem>info@uppsikt.se</StyledFooterLinkItem>
+          <StyledFooterLinkItem href="mailto:info@uppsikt.se">
+            info@uppsikt.se
+          </StyledFooterLinkItem>
           <StyledFooterLinkItem href={`tel:${phoneNumber}`}>
             {phoneNumber}
           </StyledFooterLinkItem>
