@@ -4,7 +4,7 @@ import { useState } from "react";
 import { colors } from "../../theme";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
-import { socialLinks } from "./utils";
+import { phoneNumber, socialLinks } from "./utils";
 
 const StyledHomePage = styled.div`
   font-family: "Open Sans", sans-serif;
@@ -542,7 +542,7 @@ export default function Home() {
           </StyledSectionThreeText>
           <StyledSectionThreeText>
             <a href="mailto:info@uppsikt.se">info@uppsikt.se</a> eller ring oss
-            direkt på <a href="tel:0317880123">031-7880123</a>
+            direkt på <a href={phoneNumber}>{phoneNumber}</a>
           </StyledSectionThreeText>
 
           <StyledSectionThreeText>
@@ -557,10 +557,10 @@ export default function Home() {
           <StyledFooterLogo />
         </StyledFooterTopSection>
         <StyledFooterBottomSection>
-          <StyledFooterInfoItem>Uppsikt AB</StyledFooterInfoItem>
+          <StyledFooterInfoItem>Uppsikt Sotenäs AB</StyledFooterInfoItem>
           <StyledFooterInfoItem>Org. No: 559388-9909</StyledFooterInfoItem>
           <StyledFooterLinkItem>info@uppsikt.se</StyledFooterLinkItem>
-          <StyledFooterLinkItem>0760176960</StyledFooterLinkItem>
+          <StyledFooterLinkItem>{phoneNumber}</StyledFooterLinkItem>
         </StyledFooterBottomSection>
         <StyledFooterCopyrightSection>
           © {new Date().getFullYear()} Uppsikt. All rights reserved.
