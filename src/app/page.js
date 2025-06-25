@@ -542,7 +542,7 @@ export default function Home() {
           </StyledSectionThreeText>
           <StyledSectionThreeText>
             <a href="mailto:info@uppsikt.se">info@uppsikt.se</a> eller ring oss
-            direkt på <a href={phoneNumber}>{phoneNumber}</a>
+            direkt på <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
           </StyledSectionThreeText>
 
           <StyledSectionThreeText>
@@ -560,7 +560,9 @@ export default function Home() {
           <StyledFooterInfoItem>Uppsikt Sotenäs AB</StyledFooterInfoItem>
           <StyledFooterInfoItem>Org. No: 559388-9909</StyledFooterInfoItem>
           <StyledFooterLinkItem>info@uppsikt.se</StyledFooterLinkItem>
-          <StyledFooterLinkItem>{phoneNumber}</StyledFooterLinkItem>
+          <StyledFooterLinkItem href={`tel:${phoneNumber}`}>
+            {phoneNumber}
+          </StyledFooterLinkItem>
         </StyledFooterBottomSection>
         <StyledFooterCopyrightSection>
           © {new Date().getFullYear()} Uppsikt. All rights reserved.
