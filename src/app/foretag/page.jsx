@@ -1,13 +1,13 @@
 "use client";
 import styled from "styled-components";
 import { useState } from "react";
-import { colors } from "../../theme";
+import { colors } from "../../../theme";
+import { socialLinks } from "../utils";
 import { NavMenu } from "@/components/navMenu/page";
 import SectionOne from "@/components/sectionOne/page";
+import Footer from "@/components/footer/page";
 import SectionTwo from "@/components/sectionTwo/page";
 import SectionThree from "@/components/sectionThree/page";
-import Footer from "@/components/footer/page";
-import { socialLinks } from "./utils";
 
 const StyledHomePage = styled.div`
   font-family: "Open Sans", sans-serif;
@@ -63,7 +63,6 @@ const StyledSocialIcons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 36px;
-
   &:hover {
     cursor: pointer;
   }
@@ -107,6 +106,7 @@ const StyledHeroText = styled.div`
     font-size: 36px;
   }
 `;
+
 const StyledHeroSubtext = styled.p`
   font-size: 24px;
   width: 50%;
@@ -114,8 +114,7 @@ const StyledHeroSubtext = styled.p`
     display: none;
   }
 `;
-
-export default function Home() {
+export default function Foretag() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -146,7 +145,6 @@ export default function Home() {
               <img src="/Linkedin.svg" alt="LinkedIn" />
             </a>
           </StyledSocialIcons>
-
           <StyledHamburger
             onClick={() => setMenuOpen(!menuOpen)}
           ></StyledHamburger>
@@ -154,20 +152,54 @@ export default function Home() {
 
         <NavMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}></NavMenu>
       </StyledHeader>
-
       <StyledHero>
         <StyledHeroImage src="/hero_image.jpeg" alt="Hero" />
         <StyledHeroText>
           Din Fastighet - Vårt Ansvar
           <StyledHeroSubtext>
-            Oavsett om du bor året runt eller bara ibland – vi ser till att din
-            fastighet är i trygga händer. Med Uppsikt får du en helhetslösning
-            för tillsyn, skötsel och service – anpassad efter dina behov, din
-            plats, din livsstil.
+            Uppsikt är en trygg och personlig servicepartner för företag och
+            bostadsrättsföreningar som vill förenkla vardagen med ett
+            helhetsgrepp kring fastighetsservice. Vi erbjuder professionella
+            tjänster för både inomhus- och utomhusmiljöer – allt under ett och
+            samma tak.
           </StyledHeroSubtext>
         </StyledHeroText>
       </StyledHero>
-
+      <SectionOne
+        sectionHeader={"Vad är uppsikt.se?"}
+        sectionText={
+          "Uppsikt AB grundades 2022 och erbjuder en rad tjänster som inkluderar hustillsyntjänster, städning och gräsklippning riktade både till privata kunder och företag. Företagets grundkoncept fokuserar på att ordna arbetstillfällen, vilket innebär att de strävar efter att skapa sysselsättning genom sina olika tjänster. Uppsikt AB verkar för att förenkla vardagen för sina kunder genom att erbjuda pålitliga och professionella tjänster inom hem- och trädgårdsvård."
+        }
+      ></SectionOne>
+      <SectionTwo
+        id="services-section"
+        sectionHeader="Våra tjänster:"
+        sectionImage="/hero_image_two.png"
+        sectionText={``}
+        sectionListItems={[
+          <>
+            <strong>Trapp- och kontorsstädning - </strong> regelbunden, pålitlig
+            städning som skapar rena, trivsamma miljöer.
+          </>,
+          <>
+            <strong>Fönsterputs - </strong> skinande resultat för både kontor
+            och trapphus.
+          </>,
+          <>
+            <strong>Grönyteskötsel - </strong> gräsklippning, rensning av
+            rabatter, häckklippning m.m.
+          </>,
+          <>
+            <strong>Tillsyn och vintersäkring - </strong> året-runt-trygghet för
+            fastigheten.
+          </>,
+          <>
+            <strong>Ekonomitjänster för BRF:er - </strong> bokföring, avisering
+            av avgifter, fakturering och ekonomisk rådgivning, särskilt anpassat
+            för bostadsrättsföreningar.
+          </>,
+        ]}
+      />
       <SectionOne
         sectionHeader={"En kontakt - Allt under kontroll"}
         sectionText={
@@ -175,55 +207,73 @@ export default function Home() {
         }
       ></SectionOne>
       <SectionTwo
-        id="services-section"
-        sectionHeader="Helhet är vår styrka"
+        sectionHeader="Varför välja Uppsikt?"
         sectionImage="/hero_image_two.png"
-        sectionText={`Vi gör mer än att bara “kolla till huset”. Uppsikt kombinerar
-regelbunden kontroll med praktisk hjälp och riktig omsorg – både
-inomhus och utomhus. Vi förebygger problem innan de uppstår, och löser
-dem när de gör det. Våra tjänster inkluderar:`}
+        sectionText={``}
         sectionListItems={[
           <>
-            <strong>Tillsyn av hus & tomt - </strong> året om eller vid behov
+            <strong>
+              En kontakt – Allt under kontroll <br />
+            </strong>{" "}
+            Genom samarbete med lokala aktörer kan vi erbjuda en enkel,
+            samordnad kontaktväg. Vi tar ansvar för helheten – från städ till
+            ekonomi – så att ni slipper koordinera flera leverantörer.
           </>,
           <>
-            <strong>Städning - </strong> från veckostäd till flyttstäd
+            <strong>
+              Lokalt engagemang <br />
+            </strong>
+            Vi verkar nära våra kunder och har stark förankring i de områden vi
+            verkar i. Det gör att vi snabbt kan anpassa oss och leverera service
+            med personlig omtanke.
           </>,
           <>
-            <strong>Fönsterputs - </strong> in- och utvändigt. Året om
-          </>,
-          <>
-            <strong>Vintersäkring - </strong> vatten, värme, trädgård
-          </>,
-          <>
-            <strong>Trädgårdsservice - </strong> gräsklippning, häckar, löv
-          </>,
-          <>
-            <strong>Hantverkshantering - </strong> vi släpper in, ser till &
-            rapporterar
-          </>,
-          <>
-            <strong>Trygghetskoll vid uthyrning - </strong> före, under och
-            efter
+            <strong>
+              Anpassade lösningar <br />
+            </strong>{" "}
+            Oavsett om ni är ett företag som vill ha en representativ
+            kontorsmiljö, eller en BRF med behov av både utemiljöskötsel och
+            ekonomisk förvaltning, skräddarsyr vi lösningen efter era behov.
           </>,
         ]}
-      />
+      />{" "}
       <SectionOne
         sectionHeader={"Personlig service - professionellt utförd"}
         sectionText={
           "Bakom Uppsikt står människor med omtanke och expertis. Vi kombinerar modern tillsyn med klassisk servicekänsla. Det ska kännas både tryggt och enkelt att ha ett hus – även när du inte är där."
         }
       ></SectionOne>
-
-      <SectionThree
-        sectionHeader="Välkommen att höra av dig!"
-        sectionText={[
-          "Vill du boka ett första samtal eller få en offert?",
-          "Kontakta oss på info@uppsikt.se eller ring oss direkt på {phoneNumber}",
-          "Vi berättar gärna mer om hur Uppsikt kan förenkla din vardag – året om.",
+      <SectionTwo
+        sectionHeader="Tydlig nytta för BRF:er & företag"
+        sectionImage="/hero_image_two.png"
+        sectionText={``}
+        sectionListItems={[
+          <>
+            <strong>
+              Städ & fönsterputs <br />
+            </strong>
+            Ger rena, ljusa och välkomnande miljöer
+          </>,
+          <>
+            <strong>
+              Grönyteskötsel <br />
+            </strong>
+            Höjer trivseln och förbättrar fastigheters intryck och värde
+          </>,
+          <>
+            <strong>
+              konomitjänster för BRF <br />
+            </strong>
+            Förenklar styrelsens ansvar och ger trygghet i ekonomin
+          </>,
+          <>
+            <strong>
+              En kontakt – flera lösningar <br />
+            </strong>
+            Mindre administration, bättre överblick och högre effektivitet
+          </>,
         ]}
       />
-
       <Footer></Footer>
     </StyledHomePage>
   );
