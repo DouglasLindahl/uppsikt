@@ -61,8 +61,8 @@ export function NavMenu({ menuOpen, setMenuOpen }) {
       router.push("/foretag");
     } else if (type === "kontakt") {
       window.location.href = "mailto:info@uppsikt.se";
-    } else if (type === "login") {
-      router.push("/login");
+    } else if (type === "price") {
+      router.push("/pris");
     }
     setMenuOpen(false);
   };
@@ -76,14 +76,14 @@ export function NavMenu({ menuOpen, setMenuOpen }) {
         <StyledNavItem onClick={() => handleNavigation("services")}>
           Våra tjänster
         </StyledNavItem>
-        <StyledNavItem onClick={() => handleNavigation("företag")}>
-          Företag
+        <StyledNavItem as="button" onClick={() => handleNavigation("price")}>
+          Pris
         </StyledNavItem>
         <StyledNavItem onClick={() => handleNavigation("kontakt")}>
           Kontakta oss
         </StyledNavItem>
-        <StyledNavItem as="button" onClick={() => handleNavigation("login")}>
-          Logga in
+        <StyledNavItem onClick={() => handleNavigation("företag")}>
+          Företag
         </StyledNavItem>
       </StyledSubHeader>
       <StyledMobileMenu open={menuOpen}>
@@ -93,14 +93,14 @@ export function NavMenu({ menuOpen, setMenuOpen }) {
         <StyledNavItem onClick={() => handleNavigation("services")}>
           Våra tjänster
         </StyledNavItem>
-        <StyledNavItem onClick={() => handleNavigation("företag")}>
-          Företag
+        <StyledNavItem as="button" onClick={() => handleNavigation("price")}>
+          Pris
         </StyledNavItem>
         <StyledNavItem onClick={() => handleNavigation("kontakt")}>
           Kontakta oss
         </StyledNavItem>
-        <StyledNavItem as="button" onClick={() => handleNavigation("login")}>
-          Logga in
+        <StyledNavItem onClick={() => handleNavigation("företag")}>
+          Företag
         </StyledNavItem>
         <a
           href={socialLinks.facebook}

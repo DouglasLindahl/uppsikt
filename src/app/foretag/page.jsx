@@ -7,7 +7,7 @@ import { NavMenu } from "@/components/navMenu/page";
 import SectionOne from "@/components/sectionOne/page";
 import Footer from "@/components/footer/page";
 import SectionTwo from "@/components/sectionTwo/page";
-
+import { useRouter } from "next/navigation";
 const StyledHomePage = styled.div`
   font-family: "Open Sans", sans-serif;
 `;
@@ -49,7 +49,9 @@ const StyledLogo = styled.div`
   background-repeat: no-repeat;
   width: 250px;
   height: 50px;
-
+  &:hover {
+    cursor: pointer;
+  }
   @media (max-width: 768px) {
     width: 180px;
     height: 40px;
@@ -115,12 +117,16 @@ const StyledHeroSubtext = styled.p`
 `;
 export default function Foretag() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const router = useRouter();
   return (
     <StyledHomePage>
       <StyledHeader>
         <StyledMainHeader>
-          <StyledLogo />
+          <StyledLogo
+            onClick={() => {
+              router.push("/");
+            }}
+          />
           <StyledSocialIcons>
             <a
               href={socialLinks.facebook}
