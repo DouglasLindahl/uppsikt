@@ -7,6 +7,7 @@ import { NavMenu } from "@/components/navMenu/page";
 import { useState } from "react";
 import SectionThree from "@/components/sectionThree/page";
 import Footer from "@/components/footer/page";
+import { useRouter } from "next/navigation";
 
 const StyledHeader = styled.header``;
 
@@ -113,6 +114,7 @@ const StyledHeroSubtext = styled.p`
   }
 `;
 export default function pris() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
@@ -175,7 +177,7 @@ export default function pris() {
           "Vi berättar gärna mer om hur Uppsikt kan förenkla din vardag – året om.",
         ]}
       />
-      <Footer></Footer>
+      <Footer id="footer-section"></Footer>
     </>
   );
 }

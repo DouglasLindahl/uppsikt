@@ -234,7 +234,7 @@ dem när de gör det. Våra tjänster inkluderar:`}
         ]}
       />
 
-      <Footer></Footer>
+      <Footer id="footer-section"></Footer>
     </StyledHomePage>
   );
 }

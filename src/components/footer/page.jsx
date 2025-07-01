@@ -47,9 +47,9 @@ const StyledFooterCopyrightSection = styled.div`
   text-align: center;
 `;
 
-export default function Footer() {
+export default function Footer({ id }) {
   return (
-    <StyledFooter>
+    <StyledFooter id={id}>
       <StyledFooterTopSection>
         <StyledFooterLogo />
       </StyledFooterTopSection>

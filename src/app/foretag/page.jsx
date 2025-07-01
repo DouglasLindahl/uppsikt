@@ -282,7 +282,7 @@ export default function Foretag() {
           </>,
         ]}
       />
-      <Footer></Footer>
+      <Footer id="footer-section"></Footer>
     </StyledHomePage>
   );
 }

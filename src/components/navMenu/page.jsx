@@ -55,12 +55,12 @@ export function NavMenu({ menuOpen, setMenuOpen }) {
       router.push("/");
     } else if (type === "services") {
       const el = document.getElementById("services-section");
-      console.log(el);
       el?.scrollIntoView({ behavior: "smooth" });
     } else if (type === "företag") {
       router.push("/foretag");
     } else if (type === "kontakt") {
-      window.location.href = "mailto:info@uppsikt.se";
+      const el = document.getElementById("footer-section");
+      el?.scrollIntoView({ behavior: "smooth" });
     } else if (type === "price") {
       router.push("/pris");
     }
