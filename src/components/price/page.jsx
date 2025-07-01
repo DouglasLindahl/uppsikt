@@ -180,7 +180,7 @@ export default function PriceCalculatorSection() {
             Pris: {price !== null ? `${price.toLocaleString("sv-SE")} kr` : "0"}
           </StyledOutput>
           <StyledSecondaryOutput>
-            Efter RUT:
+            Efter RUT:{" "}
             {rut !== null ? `${rut.toLocaleString("sv-SE")} kr` : "0"}
           </StyledSecondaryOutput>
         </StyledOutputSection>
