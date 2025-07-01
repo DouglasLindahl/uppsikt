@@ -175,16 +175,15 @@ export default function PriceCalculatorSection() {
           />
         </div>
 
-        {price !== null && (
-          <StyledOutputSection>
-            <StyledOutput>
-              Pris: {price.toLocaleString("sv-SE")} kr
-            </StyledOutput>
-            <StyledSecondaryOutput>
-              Efter RUT: {rut.toLocaleString("sv-SE")} kr
-            </StyledSecondaryOutput>
-          </StyledOutputSection>
-        )}
+        <StyledOutputSection>
+          <StyledOutput>
+            Pris: {price !== null ? `${price.toLocaleString("sv-SE")} kr` : "0"}
+          </StyledOutput>
+          <StyledSecondaryOutput>
+            Efter RUT:
+            {rut !== null ? `${rut.toLocaleString("sv-SE")} kr` : "0"}
+          </StyledSecondaryOutput>
+        </StyledOutputSection>
       </StyledContainer>
     </StyledSection>
   );
