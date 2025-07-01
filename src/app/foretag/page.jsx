@@ -7,7 +7,6 @@ import { NavMenu } from "@/components/navMenu/page";
 import SectionOne from "@/components/sectionOne/page";
 import Footer from "@/components/footer/page";
 import SectionTwo from "@/components/sectionTwo/page";
-import SectionThree from "@/components/sectionThree/page";
 
 const StyledHomePage = styled.div`
   font-family: "Open Sans", sans-serif;
@@ -166,10 +165,13 @@ export default function Foretag() {
         </StyledHeroText>
       </StyledHero>
       <SectionOne
-        sectionHeader={"Vad är uppsikt.se?"}
-        sectionText={
-          "Uppsikt AB grundades 2022 och erbjuder en rad tjänster som inkluderar hustillsyntjänster, städning och gräsklippning riktade både till privata kunder och företag. Företagets grundkoncept fokuserar på att ordna arbetstillfällen, vilket innebär att de strävar efter att skapa sysselsättning genom sina olika tjänster. Uppsikt AB verkar för att förenkla vardagen för sina kunder genom att erbjuda pålitliga och professionella tjänster inom hem- och trädgårdsvård."
-        }
+        sectionHeader={"Om Uppsikt"}
+        sectionText={[
+          "Uppsikt är ett nationellt serviceföretag som erbjuder städning, fönsterputs, grönyteskötsel, tillsyn och ekonomitjänster – för företag, bostadsrättsföreningar och privatpersoner över hela Sverige. Vår idé är enkel: en kontakt, allt under kontroll. Med lokal närvaro och personligt engagemang levererar vi smarta helhetslösningar med kvalitet i fokus.",
+          <br key="br1" />,
+          <br key="br2" />,
+          "Bakom Uppsikt står Scott Lindahl – entreprenör med passion för struktur, service och att göra vardagen enklare för andra.",
+        ]}
       ></SectionOne>
       <SectionTwo
         id="services-section"

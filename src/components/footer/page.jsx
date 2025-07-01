@@ -54,8 +54,8 @@ export default function Footer() {
         <StyledFooterLogo />
       </StyledFooterTopSection>
       <StyledFooterBottomSection>
-        <StyledFooterInfoItem>Uppsikt Sotenäs AB</StyledFooterInfoItem>
-        <StyledFooterInfoItem>Org. No: 559388-9909</StyledFooterInfoItem>
+        <StyledFooterInfoItem>Uppsikt Sverige AB</StyledFooterInfoItem>
+        <StyledFooterInfoItem>Org. No: 559360-7194</StyledFooterInfoItem>
         <StyledFooterLinkItem href="mailto:info@uppsikt.se">
           info@uppsikt.se
         </StyledFooterLinkItem>
