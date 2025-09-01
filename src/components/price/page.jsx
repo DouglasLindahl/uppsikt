@@ -18,7 +18,23 @@ const hemstadData = [
   { from: 551, to: 600, time: 12 },
 ];
 
-const flyttstadData = [...hemstadData];
+const flyttstadData = [
+  { from: 0, to: 45, time: 8 },
+  { from: 46, to: 50, time: 9 },
+  { from: 51, to: 60, time: 10 },
+  { from: 61, to: 70, time: 12 },
+  { from: 71, to: 80, time: 14 },
+  { from: 81, to: 90, time: 16 },
+  { from: 91, to: 100, time: 17 },
+  { from: 101, to: 125, time: 21 },
+  { from: 126, to: 150, time: 25 },
+  { from: 151, to: 175, time: 29 },
+  { from: 176, to: 200, time: 33 },
+  { from: 201, to: 225, time: 36 },
+  { from: 226, to: 250, time: 40 },
+  { from: 251, to: 275, time: 44 },
+  { from: 276, to: 300, time: 48 },
+];
 
 const TIMPRIS = {
   hemstad: 625,
@@ -187,11 +203,14 @@ export default function PriceCalculatorSection() {
           <StyledOutput>
             {outOfRange
               ? "Kontakta oss för ett pris"
-              : `Pris: ${price !== null ? `${price.toLocaleString("sv-SE")} kr` : "0"}`}
+              : `Pris: ${
+                  price !== null ? `${price.toLocaleString("sv-SE")} kr` : "0"
+                }`}
           </StyledOutput>
           {!outOfRange && (
             <StyledSecondaryOutput>
-              Efter RUT: {rut !== null ? `${rut.toLocaleString("sv-SE")} kr` : "0"}
+              Efter RUT:{" "}
+              {rut !== null ? `${rut.toLocaleString("sv-SE")} kr` : "0"}
             </StyledSecondaryOutput>
           )}
         </StyledOutputSection>
